@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guessing Game</title>
+<script>
+var ans="Harry Potter";
+function check()
+{
+  var usrAns=document.getElementById("txt").value;
+  usrAns=usrAns.toLowerCase();
+  
+  ans=ans.toLowerCase();
+  
+  if(usrAns.match(ans))
+  {
+    alert("U got it Right");
+    document.getElementById("msg").innerHTML="Congrats u Won..!";
+  } 
+  else
+  {
+    alert("Oh..! u missed it..!");
+    document.getElementById("msg").innerHTML="Try again...";
+  }
+}
+</script>
+</head>
+
+<body>
+<h2>What's the name of the Wizard boy in the J.K.Rowling's novels?</h2>
+<p>Your Answer: <input type="text" id="txt"/></p>
+<p><input type= "Button" value="Submit your Answer" onClick="check()"/></p>
+<p id="msg"></p>
+</body>
+</html> 
